@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    volumes:
+      - shop-data:/data
+    restart: unless-stopped
+volumes:
+  shop-data:
